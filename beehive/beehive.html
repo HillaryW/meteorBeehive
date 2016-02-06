@@ -1,0 +1,36 @@
+<head>
+  <title>Meteor Beehive</title>
+</head>
+
+<body>
+    <h1> Welcome to Beehive Data Input</h1>
+    
+    {{> beehive}}
+</body>
+
+<template name = "beehive">
+    <div >
+        <form>
+    
+        <div class = "form-group">
+        <label for = "guestName">Name</label>
+        <input type = "text" name="guestName"/>
+        </div>
+        
+        <div class = "form-group">
+        <label for ="guestBookMessage">Message</label>
+        <textarea name ="guestBookMessage"
+                  cols = "30" rows ="3"></textarea>
+        </div>
+        
+        
+        <button type ="submit" class = "btn btn-primary">Post Message </button>
+    </form>
+    </div>
+    
+    <div>
+    {{#each messages}}
+      <p>{{name}} {{message}}</p>
+    {{/each}}
+    </div>
+</template> 
