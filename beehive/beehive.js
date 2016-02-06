@@ -11,7 +11,7 @@ if (Meteor.isClient) {
           {}, {sort: {createdOn: -1}} ) || {};
     } });
 
-  Template.hello.events({
+  Template.beehive.events({
     "submit form": function(event) {
             event.preventDefault();
             
@@ -44,9 +44,10 @@ if (Meteor.isClient) {
               
               hiveBox.val(""); dateBox.val(""); durationBox.val(""); countBox.val("");
             } else {
-              //alert("Name and Message are both required");
-              console.output(messageBox);
-              messageBox.classlist.add("has-warning"); }
+              alert("All fields are required");
+             // console.output(messageBox);
+              //messageBox.classlist.add("has-warning");
+              }
                 
     } } );
 
